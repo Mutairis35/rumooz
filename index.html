@@ -1,334 +1,1263 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>رموز - شركاء نجاحك</title>
+        <!-- Favicon -->
+        <link rel="icon" type="icon" href="assets/images/favicon.png" />
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+        <!-- Swiper Slider -->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+        <!-- AOS Animation CSS -->
+        <link href="assets/css/aos.css" rel="stylesheet" />
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body class="overflow-x-hidden">
+        <!-- screen loader -->
+        <div class="screen_loader fixed inset-0 z-[60] grid place-content-center bg-[#fafafa] dark:bg-[#060818]">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="200px"
+                height="200px"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="xMidYMid"
+            >
+                <circle cx="50" cy="50" r="0" fill="none" stroke="#47bdff" stroke-width="4">
+                    <animate
+                        attributeName="r"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        values="0;16"
+                        keyTimes="0;1"
+                        keySplines="0 0.2 0.8 1"
+                        calcMode="spline"
+                        begin="0s"
+                    ></animate>
+                    <animate
+                        attributeName="opacity"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        values="1;0"
+                        keyTimes="0;1"
+                        keySplines="0.2 0 0.8 1"
+                        calcMode="spline"
+                        begin="0s"
+                    ></animate>
+                </circle>
+                <circle cx="50" cy="50" r="0" fill="none" stroke="#b476e5" stroke-width="4">
+                    <animate
+                        attributeName="r"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        values="0;16"
+                        keyTimes="0;1"
+                        keySplines="0 0.2 0.8 1"
+                        calcMode="spline"
+                        begin="-0.5s"
+                    ></animate>
+                    <animate
+                        attributeName="opacity"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        values="1;0"
+                        keyTimes="0;1"
+                        keySplines="0.2 0 0.8 1"
+                        calcMode="spline"
+                        begin="-0.5s"
+                    ></animate>
+                </circle>
+            </svg>
+        </div>
 
-<head>
-
-    <!--====== Required meta tags ======-->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible content-type" content="ie=edge text/html;charset=UTF-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!--====== Title ======-->
-    <title>رموز</title>
-
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
-
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!--====== Default css ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
-
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-
-</head>
-
-<body>
-
-    <!--====== HEADER PART START ======-->
-
-    <header class="header-area">
-        <div class="navgition navgition-transparent">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="#">
-                                <img src="assets/images/logo.png" height="50" width="125" alt="Logo">
-                            </a>
-
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
-                                <ul class="navbar-nav m-auto">
-                                    <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">الرئيسية</a>
+        <div class="flex min-h-screen flex-col bg-white bg-gradient-to-r from-[#FCF1F4] to-[#EDFBF9] font-mulish text-base font-normal text-gray antialiased dark:bg-[#101926] dark:from-transparent dark:to-transparent">
+            <header id="top-header" class="sticky top-0 z-50 bg-black/10 transition duration-300">
+                <div class="container">
+                    <div class="flex items-center justify-between py-5 lg:py-0">
+                        <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="h-10" /></a>
+                        <div class="flex items-center">
+                            <div onclick="toggleMenu()" class="overlay fixed inset-0 z-[51] hidden bg-black/60 lg:hidden"></div>
+                            <div class="menus">
+                                <div class="border-b border-gray/10 ltr:text-right rtl:text-left lg:hidden">
+                                    <button onclick="toggleMenu()" type="button" class="p-4">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="h-6 w-6 text-black dark:text-white"
+                                        >
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <ul>
+                                    <li><a href="index.html" class="active">الصفحة الرئيسية</a></li>
+                                    <li>
+                                        <a href="services.html">الخدمات</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#service">الخدمات</a>
+                                    <li>
+                                        <a href="team.html">الفريق</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#pricing">الاستضافة</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">اتصل بنا</a>
+                                    <li>
+                                        <a href="contact.html">اتصل بنا</a>
                                     </li>
                                 </ul>
                             </div>
-                        </nav> <!-- navbar -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- navgition -->
-<div class="background">
-
-<section class="curved">
-
-        <div id="home" class="header-hero bg_cover">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="header-content text-center">
-                            <h3 class="header-title">مرحباً بك في رموز</h3>
-							<p class="text">يداً بيد لنصنع نجاحك</p>
-                    </div>
-					</div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header content -->
-		</section>
-				</div>
-
-    </header>
-
-    <!--====== HEADER PART ENDS ======-->
-
-    <!--====== SERVICES PART START ======-->
-
-    <section id="service" class="services-area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-title text-center pb-10">
-                        <h4 class="title">الخدمات</h4>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-				    <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="single-pricing mt-40">
-                    <div class="pricing-header text-center">
-                    <span class="service">إنشاء المتاجر الإلكترونية</span>
-                    </div>
-                    </div>
-					</div>
-				    <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="single-pricing mt-40">
-                    <div class="pricing-header text-center">
-                    <span class="service">تصميم الهوية التجارية</span>
-                    </div>
-                    </div>
-					</div>
-				    <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="single-pricing mt-40">
-                    <div class="pricing-header text-center">
-                    <span class="service">التسويق الإلكتروني</span>
-                    </div>
-                    </div>
-					</div>
-				    <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="single-pricing mt-40">
-                    <div class="pricing-header text-center">
-                    <span class="service">برمجة المواقع</span>
-                    </div>
-                    </div>
-					</div>
-				    <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="single-pricing mt-40">
-                    <div class="pricing-header text-center">
-                    <span class="service">إستضافة المواقع</span>
-                    </div>
-                    </div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="single-pricing mt-40">
-                    <div class="pricing-header text-center">
-                    <span class="service">تصميم المواقع</span>
-                    </div>
-                    </div>
-					</div>
-                    </div> <!-- row -->
-                </div> <!-- row -->
-            </div> <!-- row -->
-        </div> <!-- conteiner -->
-
-    </section>
-
-    <!--====== SERVICES PART ENDS ======-->
-
-    <!--====== PRICING PART START ======-->
-
-    <section id="pricing" class="pricing-area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-title text-center pb-10">
-                        <h4 class="title">الاستضافة</h4>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="single-pricing mt-40">
-                        <div class="pricing-header text-center">
-                            <h5 class="sub-title">خطة 1</h5>
-                            <span class="price">20 د.ك</span>
-                            <p class="year">سنوياً</p>
                         </div>
-                        <div class="pricing-list">
-                            <ul>
-                                <li>Carefully crafted components</li>
-                                <li>Amazing page examples</li>
-                                <li>Super friendly support team</li>
-                                <li>Awesome Support</li>
+                    </div>
+                </div>
+            </header>
+
+            <div class="-mt-[82px] flex-grow overflow-x-hidden lg:-mt-[106px]">
+                <div class="overflow-hidden bg-black pt-[82px] sm:-mx-[250px] sm:rounded-b-[50%] lg:-mx-[150px] lg:pt-[106px]">
+                    <div class="relative">
+                        <img src="assets/images/banner-lefticon.png" alt="banner-lefticon" class="absolute left-0 top-20 sm:left-[250px] lg:left-[150px]" />
+                        <img
+                            src="assets/images/banner-rightIcon.png"
+                            alt="banner-rightIcon"
+                            class="absolute right-0 -top-4 sm:right-[250px] lg:right-[150px]"
+                        />
+                        <div class="container">
+                            <div class="relative bg-[url(../images/world-map.png)] bg-cover bg-top bg-no-repeat pt-14 pb-0 lg:pt-20 lg:pb-60 xl:pt-36">
+                                <div class="relative z-[1] text-center text-white lg:w-3/5 ltr:lg:text-left rtl:lg:text-right xl:w-1/2">
+                                    <h2 class="text-4xl font-extrabold leading-normal sm:text-5xl lg:text-[70px] lg:leading-[90px]">
+                                        رموز <span class="italic text-primary">رمز النجاح</span> <span class="italic text-secondary">لنصنع</span> المستقبل
+                                    </h2>
+                                </div>
+                                <div
+                                    class="bottom-0 mx-auto w-auto ltr:right-0 rtl:left-0 md:w-[540px] lg:absolute xl:w-[650px]"
+                                    data-aos="fade-left"
+                                    data-aos-duration="1000"
+                                >
+                                    <img src="assets/images/home-banner-icon.svg" alt="home-banner-icon" class="rtl:rotate-y-180" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="bg-[url(../images/service-bg.png)] bg-cover bg-center bg-no-repeat py-14 dark:bg-none lg:py-[100px]">
+                    <div class="container">
+                        <div class="heading text-center">
+                            <h6>خدماتنا</h6>
+                            <h4>نحن نساعدك لننجح</h4>
+                        </div>
+                        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div
+                                    class="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary"
+                                    style="box-shadow: -20px 30px 70px rgba(219, 222, 225, 0.4)"
+                                >
+                                    <div
+                                        class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary transition group-hover:bg-black"
+                                        style="box-shadow: 0px 15px 30px rgba(180, 118, 229, 0.4)"
+                                    >
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                opacity="0.5"
+                                                d="M14.2371 18.7087L18.7103 14.2366L21.4893 17.0156V21.4888H17.0172L14.2371 18.7087ZM5.2917 9.76334L2.3092 6.7819C2.21118 6.68399 2.13342 6.56771 2.08036 6.43973C2.02731 6.31174 2 6.17455 2 6.03601C2 5.89746 2.02731 5.76027 2.08036 5.63229C2.13342 5.5043 2.21118 5.38803 2.3092 5.29012L5.2917 2.30867C5.4894 2.11103 5.75751 2 6.03706 2C6.31662 2 6.58472 2.11103 6.78242 2.30867L9.76598 5.29012L5.2917 9.76334Z"
+                                                fill="white"
+                                            />
+                                            <path
+                                                d="M5.29177 12.7459L7.21895 14.6742L8.71179 13.1813L6.78249 11.2552L8.27321 9.76449L10.2015 11.6917L11.6922 10.201L9.76605 8.27271L11.2568 6.78199L13.1818 8.71128L14.6736 7.2195L12.7454 5.29232L15.7279 2.31087C15.9256 2.11323 16.1937 2.0022 16.4732 2.0022C16.7528 2.0022 17.0209 2.11323 17.2186 2.31087L21.6908 6.78304C21.8884 6.98074 21.9994 7.24885 21.9994 7.5284C21.9994 7.80795 21.8884 8.07606 21.6908 8.27376L8.27321 21.6913C8.07551 21.889 7.8074 22 7.52785 22C7.2483 22 6.98019 21.889 6.78249 21.6913L2.31032 17.2192C2.11268 17.0215 2.00165 16.7533 2.00165 16.4738C2.00165 16.1942 2.11268 15.9261 2.31032 15.7284L5.29177 12.7459Z"
+                                                fill="white"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <a
+                                        href="services-detail.html"
+                                        class="my-8 inline-block text-[22px] font-extrabold text-black dark:text-white dark:group-hover:text-black"
+                                        >تصميم UI / UX</a
+                                    >
+                                    <p class="mb-10 text-lg font-semibold transition line-clamp-3 dark:group-hover:text-black">
+                                        نحن نقدم خدمات بأفضل التصميمات من فريق المصمم الخاص بنا لعملك.
+                                    </p>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div
+                                    class="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary"
+                                    style="box-shadow: -20px 30px 70px rgba(219, 222, 225, 0.4)"
+                                >
+                                    <div
+                                        class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary transition group-hover:bg-black"
+                                        style="box-shadow: 0px 15px 30px rgba(180, 118, 229, 0.4)"
+                                    >
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                opacity="0.5"
+                                                d="M10.1658 20C10.5862 20 10.9617 19.7371 11.1054 19.342L15.8374 6.34204C16.0749 5.68981 15.5919 5 14.8978 5H13.8341C13.4137 5 13.0382 5.26292 12.8945 5.65796L8.16245 18.658C7.92504 19.3102 8.40804 20 9.10214 20H10.1658Z"
+                                                fill="white"
+                                            />
+                                            <path
+                                                d="M17.9889 17.0964C18.3794 17.4871 19.0127 17.4873 19.4034 17.0966L23.2929 13.2071C23.6834 12.8166 23.6834 12.1834 23.2929 11.7929L19.4036 7.90359C19.0129 7.51287 18.3793 7.5131 17.9889 7.90409L17.2814 8.61254C16.8913 9.00328 16.8916 9.63632 17.2823 10.0266L19.0501 11.7927C19.441 12.1832 19.441 12.8168 19.0502 13.2074L17.2822 14.9746C16.8916 15.365 16.8914 15.9981 17.2818 16.3888L17.9889 17.0964ZM4.94994 13.2073C4.55904 12.8167 4.55896 12.1832 4.94977 11.7925L6.71781 10.0253C7.10839 9.63494 7.10858 9.00184 6.71823 8.61121L6.01111 7.90359C5.62062 7.51283 4.98726 7.51272 4.59664 7.90334L0.707106 11.7929C0.316582 12.1834 0.316582 12.8166 0.707107 13.2071L4.59639 17.0964C4.98711 17.4871 5.62066 17.4869 6.01111 17.0959L6.71856 16.3874C7.10874 15.9967 7.10837 15.3637 6.71773 14.9734L4.94994 13.2073Z"
+                                                fill="white"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <a
+                                        href="services-detail.html"
+                                        class="my-8 inline-block text-[22px] font-extrabold text-black dark:text-white dark:group-hover:text-black"
+                                        >تطوير الموقع</a
+                                    >
+                                    <p class="mb-10 text-lg font-semibold transition line-clamp-3 dark:group-hover:text-black">
+                                        نحن نساعد في تطوير مواقع الشركة لتكون أكثر احترافية وجاذبية
+                                    </p>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div
+                                    class="group rounded-3xl border-2 border-white bg-white p-6 transition duration-500 hover:border-secondary hover:bg-secondary/20 dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.04] dark:to-transparent dark:!shadow-none dark:hover:bg-secondary"
+                                    style="box-shadow: -20px 30px 70px rgba(219, 222, 225, 0.4)"
+                                >
+                                    <div
+                                        class="flex h-14 w-14 items-center justify-center rounded-full bg-secondary transition group-hover:bg-black"
+                                        style="box-shadow: 0px 15px 30px rgba(180, 118, 229, 0.4)"
+                                    >
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                opacity="0.5"
+                                                d="M6.21053 20H3.05263C2.77346 20 2.50572 19.8891 2.30831 19.6917C2.1109 19.4943 2 19.2265 2 18.9474V10.5263C2 10.2471 2.1109 9.97941 2.30831 9.782C2.50572 9.58459 2.77346 9.47369 3.05263 9.47369H6.21053C6.4897 9.47369 6.75744 9.58459 6.95485 9.782C7.15226 9.97941 7.26316 10.2471 7.26316 10.5263V18.9474C7.26316 19.2265 7.15226 19.4943 6.95485 19.6917C6.75744 19.8891 6.4897 20 6.21053 20ZM20.9474 20H17.7895C17.5103 20 17.2426 19.8891 17.0452 19.6917C16.8477 19.4943 16.7368 19.2265 16.7368 18.9474V7.36843C16.7368 7.08925 16.8477 6.82151 17.0452 6.6241C17.2426 6.4267 17.5103 6.3158 17.7895 6.3158H20.9474C21.2265 6.3158 21.4943 6.4267 21.6917 6.6241C21.8891 6.82151 22 7.08925 22 7.36843V18.9474C22 19.2265 21.8891 19.4943 21.6917 19.6917C21.4943 19.8891 21.2265 20 20.9474 20Z"
+                                                fill="white"
+                                            />
+                                            <path
+                                                d="M13.5789 20H10.421C10.1419 20 9.87412 19.8891 9.67672 19.6917C9.47931 19.4943 9.36841 19.2265 9.36841 18.9474V1.05263C9.36841 0.773456 9.47931 0.505715 9.67672 0.308309C9.87412 0.110902 10.1419 0 10.421 0H13.5789C13.8581 0 14.1259 0.110902 14.3233 0.308309C14.5207 0.505715 14.6316 0.773456 14.6316 1.05263V18.9474C14.6316 19.2265 14.5207 19.4943 14.3233 19.6917C14.1259 19.8891 13.8581 20 13.5789 20Z"
+                                                fill="white"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <a
+                                        href="services-detail.html"
+                                        class="my-8 inline-block text-[22px] font-extrabold text-black dark:text-white dark:group-hover:text-black"
+                                        >التسويق الرقمي</a
+                                    >
+                                    <p class="mb-10 text-lg font-semibold transition line-clamp-3 dark:group-hover:text-black">
+                                        نساعدك أيضًا في تسويق منتجاتك من خلال سوق عبر الإنترنت.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-14 dark:!bg-none lg:py-[100px]" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 54.69%)">
+                    <div class="container">
+                        <div class="heading text-center">
+                            <h6>حقائق الشركة</h6>
+                            <h4>نحن فخورون بفريقنا</h4>
+                        </div>
+                        <div class="grid gap-[30px] sm:grid-cols-2 lg:grid-cols-4">
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div
+                                    class="group flex cursor-pointer items-baseline rounded-3xl border border-white bg-white py-8 px-6 transition duration-500 hover:border-secondary hover:bg-secondary/10 dark:border-transparent dark:bg-gray-dark dark:hover:bg-secondary"
+                                >
+                                    <div>
+                                        <svg
+                                            width="26"
+                                            height="26"
+                                            viewBox="0 0 26 26"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="text-secondary transition dark:group-hover:text-black"
+                                        >
+                                            <g clip-path="url(#clip0_6_2530)">
+                                                <path
+                                                    opacity="0.3"
+                                                    d="M9.26505 23.1907C8.867 22.5979 9.34238 21.8701 10.0565 21.8701H15.3123C16.0264 21.8701 16.5018 22.5979 16.1038 23.1907C15.3466 24.3185 14.3 25.2316 13.0656 25.8283C12.8248 25.9448 12.544 25.9448 12.3032 25.8283C11.0688 25.2316 10.0222 24.3185 9.26505 23.1907Z"
+                                                    fill="currentColor"
+                                                />
+                                                <path
+                                                    d="M19.7602 15.3657C19.7602 15.6093 19.8491 15.8444 20.0102 16.0271L21.8688 18.1348C22.0299 18.3175 22.1188 18.5527 22.1188 18.7962V19.6908C22.1188 20.2431 21.6711 20.6908 21.1188 20.6908H4.25C3.69772 20.6908 3.25 20.2431 3.25 19.6908V18.7962C3.25 18.5527 3.33888 18.3175 3.49997 18.1348L5.35863 16.0271C5.51971 15.8444 5.6086 15.6093 5.6086 15.3657V8.89781C5.6086 4.89015 8.41975 1.46516 12.3859 0.0983C12.5792 0.0316815 12.7896 0.0316814 12.9829 0.0982998C16.949 1.46516 19.7602 4.89015 19.7602 8.89781V15.3657ZM12.6844 11.2564C13.3099 11.2564 13.9098 11.0079 14.3522 10.5656C14.7945 10.1233 15.043 9.52335 15.043 8.89781C15.043 8.27227 14.7945 7.67235 14.3522 7.23003C13.9098 6.78771 13.3099 6.53921 12.6844 6.53921C12.0589 6.53921 11.4589 6.78771 11.0166 7.23003C10.5743 7.67235 10.3258 8.27227 10.3258 8.89781C10.3258 9.52335 10.5743 10.1233 11.0166 10.5656C11.4589 11.0079 12.0589 11.2564 12.6844 11.2564Z"
+                                                    fill="currentColor"
+                                                />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_6_2530">
+                                                    <rect width="26" height="26" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="ltr:pl-4 rtl:pr-4">
+                                        <h4
+                                            class="pb-2.5 text-4xl font-black leading-none transition dark:text-white dark:group-hover:text-black"
+                                            data-vanilla-counter
+                                            data-start-at="0"
+                                            data-end-at="2"
+                                            data-time="4000"
+                                            data-delay="1000"
+                                            data-format="{}+"
+                                        ></h4>
+                                        <span class="font-bold text-black transition dark:text-gray dark:group-hover:text-black">عام في العمل</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div
+                                    class="group flex cursor-pointer items-baseline rounded-3xl border border-white bg-white py-8 px-6 transition duration-500 hover:border-secondary hover:bg-secondary/10 dark:border-transparent dark:bg-gray-dark dark:hover:bg-secondary"
+                                >
+                                    <div>
+                                        <svg
+                                            width="26"
+                                            height="26"
+                                            viewBox="0 0 26 26"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="text-secondary transition dark:group-hover:text-black"
+                                        >
+                                            <g clip-path="url(#clip0_6_2631)">
+                                                <path
+                                                    opacity="0.3"
+                                                    d="M4.2757 15.6078C4.27493 15.6078 4.27425 15.6084 4.27403 15.6091C4.06737 16.3065 3.94528 17.0263 3.9104 17.7528L3.9 18.2V25C3.9 25.5523 3.45228 26 2.9 26H1C0.447715 26 1.18712e-07 25.5523 1.18712e-07 25V20.15C-0.000255849 19.0289 0.413437 17.9471 1.16173 17.1122C1.91001 16.2773 2.94021 15.7481 4.0547 15.626L4.2757 15.6078ZM22.0225 17.0047C21.9324 16.3161 22.4694 15.6613 23.1157 15.9157C23.7351 16.1595 24.299 16.5384 24.7632 17.0317C25.5575 17.8757 25.9998 18.991 26 20.15V25.0001C26 25.5523 25.5523 26 25 26H23.1C22.5477 26 22.1 25.5523 22.1 25V18.2C22.1 17.7948 22.0737 17.3958 22.0225 17.0047ZM4.55 7.80005C5.41195 7.80005 6.2386 8.14246 6.8481 8.75195C7.45759 9.36145 7.8 10.1881 7.8 11.05C7.8 11.912 7.45759 12.7387 6.8481 13.3481C6.2386 13.9576 5.41195 14.3 4.55 14.3C3.68805 14.3 2.8614 13.9576 2.2519 13.3481C1.64241 12.7387 1.3 11.912 1.3 11.05C1.3 10.1881 1.64241 9.36145 2.2519 8.75195C2.8614 8.14246 3.68805 7.80005 4.55 7.80005ZM21.45 7.80005C22.312 7.80005 23.1386 8.14246 23.7481 8.75195C24.3576 9.36145 24.7 10.1881 24.7 11.05C24.7 11.912 24.3576 12.7387 23.7481 13.3481C23.1386 13.9576 22.312 14.3 21.45 14.3C20.588 14.3 19.7614 13.9576 19.1519 13.3481C18.5424 12.7387 18.2 11.912 18.2 11.05C18.2 10.1881 18.5424 9.36145 19.1519 8.75195C19.7614 8.14246 20.588 7.80005 21.45 7.80005Z"
+                                                    fill="currentColor"
+                                                />
+                                                <path
+                                                    d="M13 11.7C14.7239 11.7 16.3772 12.3848 17.5962 13.6038C18.8152 14.8228 19.5 16.4761 19.5 18.2V25C19.5 25.5523 19.0523 26 18.5 26H7.5C6.94772 26 6.5 25.5523 6.5 25V18.2C6.5 16.4761 7.18482 14.8228 8.40381 13.6038C9.62279 12.3848 11.2761 11.7 13 11.7ZM13 0C14.3791 0 15.7018 0.547856 16.677 1.52304C17.6521 2.49823 18.2 3.82087 18.2 5.2C18.2 6.57913 17.6521 7.90177 16.677 8.87696C15.7018 9.85214 14.3791 10.4 13 10.4C11.6209 10.4 10.2982 9.85214 9.32304 8.87696C8.34786 7.90177 7.8 6.57913 7.8 5.2C7.8 3.82087 8.34786 2.49823 9.32304 1.52304C10.2982 0.547856 11.6209 0 13 0Z"
+                                                    fill="currentColor"
+                                                />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_6_2631">
+                                                    <rect width="26" height="26" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="ltr:pl-4 rtl:pr-4">
+                                        <h4
+                                            class="pb-2.5 text-4xl font-black leading-none transition dark:text-white dark:group-hover:text-black"
+                                            data-vanilla-counter
+                                            data-start-at="0"
+                                            data-end-at="2"
+                                            data-time="4000"
+                                            data-delay="1000"
+                                            data-format="{}+"
+                                        ></h4>
+                                        <span class="font-bold text-black transition dark:text-gray dark:group-hover:text-black">أعضاء الفريق</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div
+                                    class="group flex cursor-pointer items-baseline rounded-3xl border border-white bg-white py-8 px-6 transition duration-500 hover:border-secondary hover:bg-secondary/10 dark:border-transparent dark:bg-gray-dark dark:hover:bg-secondary"
+                                >
+                                    <div>
+                                        <svg
+                                            width="26"
+                                            height="26"
+                                            viewBox="0 0 26 26"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="text-secondary transition dark:group-hover:text-black"
+                                        >
+                                            <g clip-path="url(#clip0_6_2641)">
+                                                <path
+                                                    opacity="0.3"
+                                                    d="M13 26C5.8201 26 0 20.1799 0 13C0 5.8201 5.8201 0 13 0C20.1799 0 26 5.8201 26 13C26 20.1799 20.1799 26 13 26Z"
+                                                    fill="currentColor"
+                                                />
+                                                <path
+                                                    d="M6.49998 14.3C6.49998 16.024 7.18479 17.6773 8.40378 18.8962C9.62277 20.1152 11.2761 20.8 13 20.8C14.7239 20.8 16.3772 20.1152 17.5962 18.8962C18.8152 17.6773 19.5 16.024 19.5 14.3H16.9C16.9 15.3344 16.4891 16.3264 15.7577 17.0578C15.0263 17.7892 14.0343 18.2 13 18.2C11.9656 18.2 10.9736 17.7892 10.2423 17.0578C9.51087 16.3264 9.09998 15.3344 9.09998 14.3H6.49998ZM7.79998 11.7C8.31715 11.7 8.81314 11.4946 9.17883 11.1289C9.54453 10.7632 9.74998 10.2672 9.74998 9.75005C9.74998 9.23288 9.54453 8.73689 9.17883 8.37119C8.81314 8.00549 8.31715 7.80005 7.79998 7.80005C7.2828 7.80005 6.78681 8.00549 6.42112 8.37119C6.05542 8.73689 5.84998 9.23288 5.84998 9.75005C5.84998 10.2672 6.05542 10.7632 6.42112 11.1289C6.78681 11.4946 7.2828 11.7 7.79998 11.7ZM18.2 11.7C18.7171 11.7 19.2131 11.4946 19.5788 11.1289C19.9445 10.7632 20.15 10.2672 20.15 9.75005C20.15 9.23288 19.9445 8.73689 19.5788 8.37119C19.2131 8.00549 18.7171 7.80005 18.2 7.80005C17.6828 7.80005 17.1868 8.00549 16.8211 8.37119C16.4554 8.73689 16.25 9.23288 16.25 9.75005C16.25 10.2672 16.4554 10.7632 16.8211 11.1289C17.1868 11.4946 17.6828 11.7 18.2 11.7Z"
+                                                    fill="currentColor"
+                                                />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_6_2641">
+                                                    <rect width="26" height="26" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="ltr:pl-4 rtl:pr-4">
+                                        <h4
+                                            class="pb-2.5 text-4xl font-black leading-none transition dark:text-white dark:group-hover:text-black"
+                                            data-vanilla-counter
+                                            data-start-at="0"
+                                            data-end-at="16"
+                                            data-time="4000"
+                                            data-delay="1000"
+                                            data-format="{}+"
+                                        ></h4>
+                                        <span class="font-bold text-black transition dark:text-gray dark:group-hover:text-black">عملاء سعداء</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div
+                                    class="group flex cursor-pointer items-baseline rounded-3xl border border-white bg-white py-8 px-6 transition duration-500 hover:border-secondary hover:bg-secondary/10 dark:border-transparent dark:bg-gray-dark dark:hover:bg-secondary"
+                                >
+                                    <div>
+                                        <svg
+                                            width="26"
+                                            height="26"
+                                            viewBox="0 0 26 26"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="text-secondary transition dark:group-hover:text-black"
+                                        >
+                                            <g clip-path="url(#clip0_6_2651)">
+                                                <path
+                                                    d="M1.31194 8.73474H24.6881C24.8695 8.73466 25.049 8.77223 25.2151 8.84507C25.3813 8.91791 25.5305 9.02444 25.6534 9.15792C25.7763 9.29141 25.8702 9.44894 25.929 9.62055C25.9879 9.79216 26.0105 9.97413 25.9955 10.1549L24.9018 23.2684C24.8745 23.5961 24.7251 23.9016 24.4832 24.1243C24.2413 24.347 23.9245 24.4708 23.5957 24.4709H2.40429C2.07547 24.4708 1.75871 24.347 1.5168 24.1243C1.27489 23.9016 1.12548 23.5961 1.09819 23.2684L0.00452488 10.1549C-0.010534 9.97413 0.0120899 9.79216 0.0709658 9.62055C0.129842 9.44894 0.223688 9.29141 0.346571 9.15792C0.469454 9.02444 0.618698 8.91791 0.784866 8.84507C0.951034 8.77223 1.13051 8.73466 1.31194 8.73474Z"
+                                                    fill="currentColor"
+                                                />
+                                                <path
+                                                    opacity="0.3"
+                                                    d="M14.5614 3.1965C14.7489 3.38404 15.0033 3.4894 15.2685 3.4894H23.4908C23.8386 3.4894 24.1722 3.62756 24.4181 3.87348C24.664 4.11941 24.8022 4.45296 24.8022 4.80075V5.1121C24.8022 5.66438 24.3545 6.1121 23.8022 6.1121H2.19788C1.64559 6.1121 1.19788 5.66438 1.19788 5.1121V2.17805C1.19788 1.83026 1.33604 1.49671 1.58196 1.25078C1.82789 1.00486 2.16143 0.866699 2.50923 0.866699H11.8174C12.0826 0.866699 12.3369 0.972056 12.5245 1.15959L14.5614 3.1965Z"
+                                                    fill="currentColor"
+                                                />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_6_2651">
+                                                    <rect width="26" height="26" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="ltr:pl-4 rtl:pr-4">
+                                        <h4
+                                            class="pb-2.5 text-4xl font-black leading-none transition dark:text-white dark:group-hover:text-black"
+                                            data-vanilla-counter
+                                            data-start-at="0"
+                                            data-end-at="21"
+                                            data-time="4000"
+                                            data-delay="1000"
+                                            data-format="{}+"
+                                        ></h4>
+                                        <span class="font-bold text-black transition dark:text-gray dark:group-hover:text-black">المشاريع المنجزة</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-[url(../images/team-bg.png)] bg-cover bg-center bg-no-repeat py-14 dark:bg-black/50 lg:py-[100px]">
+                    <div class="container">
+                        <div class="heading text-center">
+                            <h6>Meet Our Team</h6>
+                            <h4>Creative Minds</h4>
+                        </div>
+                        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+                            <div class="group cursor-pointer text-center">
+                                <div class="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
+                                    <img src="assets/images/team-member-1.png" alt="team-member-1" class="h-full w-full rounded-3xl object-cover object-top" />
+                                </div>
+                                <h4 class="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
+                                    فيصل نايف
+                                </h4>
+                                <h6 class="text-sm font-bold">الرئيس التنفيذي والمطور الرئيسي</h6>
+                            </div>
+                            <div class="group cursor-pointer text-center">
+                                <div class="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
+                                    <img src="assets/images/team-member-2.png" alt="team-member-2" class="h-full w-full rounded-3xl object-cover object-top" />
+                                </div>
+                                <h4 class="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
+                                    عبدالله محمد
+                                </h4>
+                                <h6 class="text-sm font-bold">المدير المالي ورئيس قسم التسويق</h6>
+                            </div>
+                            <div class="group cursor-pointer text-center">
+                                <div class="relative h-[280px] rounded-3xl transition-all duration-500 group-hover:shadow-[0_0_25px_#979797]">
+                                    <img src="assets/images/team-member-3.png" alt="team-member-3" class="h-full w-full rounded-3xl object-cover object-top" />
+                                </div>
+                                <h4 class="pt-5 pb-2 text-xl font-extrabold text-black transition duration-500 group-hover:text-secondary dark:text-white">
+                                    James Robinson
+                                </h4>
+                                <h6 class="text-sm font-bold">Chief Financial Officer</h6>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-gradient-to-b from-white/60 to-transparent py-14 dark:from-white/[0.02] lg:py-[100px]">
+                    <div class="container">
+                        <div class="heading text-center">
+                            <h6>Pricing Plan</h6>
+                            <h4>Choose Affordable Prices</h4>
+                        </div>
+                        <div class="grid grid-cols-1 gap-[30px] md:grid-cols-2 lg:grid-cols-3">
+                            <div
+                                class="group flex flex-col rounded-3xl border-2 border-primary bg-white p-6 px-4 transition hover:bg-primary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                            >
+                                <div class="mb-8">
+                                    <h3 class="text-[22px] font-black text-black dark:text-white">Intro</h3>
+                                </div>
+                                <ul class="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Daily content updates</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Unlimited downloads of FREE resources</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Unlimited PREMIUM downloads</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Valid commercial licenses</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <circle cx="8" cy="8" r="8" fill="#7780A1" />
+                                                </g>
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Advanced Search</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <circle cx="8" cy="8" r="8" fill="#7780A1" />
+                                                </g>
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">No attribution required</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.3">
+                                                    <circle cx="8" cy="8" r="8" fill="#7780A1" />
+                                                </g>
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Browse with no ads</p>
+                                    </li>
+                                </ul>
+                                <div class="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
+                                    <div class="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
+                                        <div
+                                            class="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-primary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0"
+                                        >
+                                            Monthly
+                                        </div>
+                                        <a
+                                            href="javascript:"
+                                            class="btn text-xl text-white group-hover:bg-white group-hover:text-primary dark:text-black xl:w-44"
+                                            >$39.99<small class="text-xs lowercase">/month</small></a
+                                        >
+                                    </div>
+                                    <span class="block text-center text-sm font-bold text-black dark:text-white sm:pr-5 ltr:sm:text-right rtl:sm:text-left"
+                                        >Billed every month</span
+                                    >
+                                </div>
+                            </div>
+                            <div
+                                class="group flex flex-col rounded-3xl border-2 border-secondary bg-white p-6 px-4 transition hover:bg-secondary hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                            >
+                                <div class="relative mb-8">
+                                    <h3 class="text-[22px] font-black text-black dark:text-white">Base</h3>
+                                    <div
+                                        class="group-hover:white/10 absolute top-1/2 -translate-y-1/2 rounded-xl bg-secondary/10 py-2 px-4 text-xs font-black text-secondary group-hover:bg-white group-hover:text-black ltr:right-0 rtl:left-0"
+                                    >
+                                        MOST POPULAR
+                                    </div>
+                                </div>
+                                <ul class="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Daily content updates</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Unlimited downloads of FREE resources</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Unlimited PREMIUM downloads</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Valid commercial licenses</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Advanced Search</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">No attribution required</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Browse with no ads</p>
+                                    </li>
+                                </ul>
+                                <div class="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
+                                    <div class="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
+                                        <div
+                                            class="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-secondary group-hover:text-white group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0"
+                                        >
+                                            Yearly
+                                        </div>
+                                        <a
+                                            href="javascript:"
+                                            class="btn bg-secondary text-xl text-white group-hover:bg-white group-hover:text-secondary dark:text-black xl:w-44"
+                                            >$14.99<small class="text-xs lowercase">/month</small></a
+                                        >
+                                    </div>
+                                    <span class="block text-center text-sm font-bold text-black dark:text-white sm:pr-5 ltr:sm:text-right rtl:sm:text-left"
+                                        >$179.00 every 12 months</span
+                                    >
+                                </div>
+                            </div>
+                            <div
+                                class="group flex flex-col rounded-3xl border-2 border-black bg-white p-6 px-4 transition hover:bg-black hover:drop-shadow-[-10px_30px_70px_rgba(40,38,77,0.25)] dark:border-white/10 dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.01] dark:to-transparent dark:drop-shadow-none dark:hover:border-gray-dark dark:hover:bg-gray-dark sm:px-6"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                            >
+                                <div class="mb-8">
+                                    <h3 class="text-[22px] font-black text-black group-hover:text-white dark:text-white">Pro</h3>
+                                </div>
+                                <ul class="space-y-5 pb-7 text-sm font-bold group-hover:text-white">
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Daily content updates</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Unlimited downloads of FREE resources</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Unlimited PREMIUM downloads</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Valid commercial licenses</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Advanced Search</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">No attribution required</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <div>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="8" cy="8" r="8" fill="#45B649" />
+                                                <path
+                                                    d="M5.11438 8.11438L7 10L10.7712 6.22876"
+                                                    stroke="white"
+                                                    stroke-width="1.6"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="ltr:pl-3 rtl:pr-3">Browse with no ads</p>
+                                    </li>
+                                </ul>
+                                <div class="mt-auto border-t-2 border-[#BBC0D0]/50 pt-7">
+                                    <div class="mb-3 flex flex-col items-center justify-center sm:flex-row sm:justify-between">
+                                        <div
+                                            class="relative mb-2 text-lg font-extrabold before:absolute before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:bg-black group-hover:text-gray group-hover:before:bg-white ltr:pl-5 ltr:before:left-0 rtl:pr-5 rtl:before:right-0 sm:mb-0"
+                                        >
+                                            Yearly
+                                        </div>
+                                        <a href="javascript:" class="btn bg-black text-xl text-white group-hover:bg-white group-hover:text-black xl:w-44"
+                                            >$499</a
+                                        >
+                                    </div>
+                                    <span
+                                        class="block text-center text-sm font-bold text-black group-hover:text-white dark:text-white sm:pr-5 ltr:sm:text-right rtl:sm:text-left"
+                                        >Billed once only</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="relative bg-black py-14 dark:bg-transparent lg:py-[100px]">
+                    <div class="absolute top-0 ltr:right-0 rtl:left-0 rtl:-rotate-180">
+                        <svg width="758" height="741" viewBox="0 0 758 741" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.03">
+                                <ellipse
+                                    opacity="0.1"
+                                    cx="752"
+                                    cy="370.646"
+                                    rx="750"
+                                    ry="749.646"
+                                    stroke="white"
+                                    stroke-width="3"
+                                    stroke-miterlimit="4.62023"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="35 50 15 15"
+                                />
+                                <path
+                                    opacity="0.1"
+                                    d="M1443.13 370.646C1443.13 752.153 1133.7 1061.43 752 1061.43C370.296 1061.43 60.8655 752.153 60.8655 370.646C60.8655 -10.8606 370.296 -320.134 752 -320.134C1133.7 -320.134 1443.13 -10.8606 1443.13 370.646Z"
+                                    stroke="white"
+                                    stroke-width="3"
+                                />
+                                <ellipse
+                                    opacity="0.2"
+                                    cx="752"
+                                    cy="370.646"
+                                    rx="634.561"
+                                    ry="634.207"
+                                    stroke="white"
+                                    stroke-width="3"
+                                    stroke-miterlimit="4.62023"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="35 50 15 15"
+                                />
+                                <path
+                                    opacity="0.3"
+                                    d="M1328.4 370.646C1328.4 688.789 1070.34 946.696 752 946.696C433.66 946.696 175.596 688.789 175.596 370.646C175.596 52.5037 433.66 -205.403 752 -205.403C1070.34 -205.403 1328.4 52.5037 1328.4 370.646Z"
+                                    stroke="white"
+                                    stroke-width="3"
+                                />
+                                <ellipse
+                                    opacity="0.4"
+                                    cx="752"
+                                    cy="370.646"
+                                    rx="519.83"
+                                    ry="519.476"
+                                    stroke="white"
+                                    stroke-width="3"
+                                    stroke-miterlimit="4.62023"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="35 50 15 15"
+                                />
+                                <path
+                                    opacity="0.5"
+                                    d="M1211.55 370.646C1211.55 624.251 1005.8 829.84 752 829.84C498.197 829.84 292.452 624.251 292.452 370.646C292.452 117.041 498.197 -88.5479 752 -88.5479C1005.8 -88.5479 1211.55 117.041 1211.55 370.646Z"
+                                    stroke="white"
+                                    stroke-width="3"
+                                />
+                                <path
+                                    opacity="0.6"
+                                    d="M1155.6 370.646C1155.6 593.351 974.903 773.891 752 773.891C529.097 773.891 348.401 593.351 348.401 370.646C348.401 147.942 529.097 -32.5986 752 -32.5986C974.903 -32.5986 1155.6 147.942 1155.6 370.646Z"
+                                    stroke="white"
+                                    stroke-width="3"
+                                />
+                                <ellipse
+                                    opacity="0.7"
+                                    cx="752"
+                                    cy="370.646"
+                                    rx="350.567"
+                                    ry="350.212"
+                                    stroke="white"
+                                    stroke-width="3"
+                                    stroke-miterlimit="4.62023"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="35 50 15 15"
+                                />
+                                <path
+                                    opacity="0.8"
+                                    d="M1040.16 370.647C1040.16 529.596 911.148 658.453 752 658.453C592.852 658.453 463.84 529.596 463.84 370.647C463.84 211.698 592.852 82.8408 752 82.8408C911.148 82.8408 1040.16 211.698 1040.16 370.647Z"
+                                    stroke="white"
+                                    stroke-width="3"
+                                />
+                                <ellipse
+                                    opacity="0.9"
+                                    cx="752"
+                                    cy="370.646"
+                                    rx="223.088"
+                                    ry="222.734"
+                                    stroke="white"
+                                    stroke-width="3"
+                                    stroke-miterlimit="4.62023"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="35 50 15 15"
+                                />
+                                <path
+                                    d="M909.848 370.646C909.848 457.624 839.18 528.14 752 528.14C664.82 528.14 594.152 457.624 594.152 370.646C594.152 283.667 664.82 213.151 752 213.151C839.18 213.151 909.848 283.667 909.848 370.646Z"
+                                    stroke="white"
+                                    stroke-width="3"
+                                />
+                                <ellipse
+                                    cx="752"
+                                    cy="370.646"
+                                    rx="106.941"
+                                    ry="106.586"
+                                    stroke="white"
+                                    stroke-width="3"
+                                    stroke-miterlimit="4.62023"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="35 50 15 15"
+                                />
+                            </g>
+                        </svg>
+                    </div>
+                </section>
+				-
+                <section class="py-14 dark:bg-gray-dark lg:py-[100px]">
+                    <div class="container">
+                        <div class="relative z-10 lg:flex">
+                            <form action="" class="rounded-3xl bg-white px-4 py-12 dark:bg-[#101626] lg:w-2/3 lg:px-8">
+                                <div class="grid gap-10 sm:grid-cols-2">
+                                    <div class="relative">
+                                        <input
+                                            type="text"
+                                            name="city"
+                                            class="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                        />
+                                     
+                                    </div>
+                                </div>
+                                <div class="relative mt-10">
+                                    <input
+                                        type="text"
+                                        name="message"
+                                        class="w-full rounded-2xl border-2 border-gray/20 bg-transparent p-4 font-bold outline-none transition focus:border-secondary ltr:pr-12 rtl:pl-12"
+                                    />
+                                </div>
+                                <div class="mt-10 text-center ltr:lg:text-right rtl:lg:text-left">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+				-
+            </div>
+
+            <footer class="mt-auto bg-white dark:bg-transparent dark:bg-gradient-to-b dark:from-white/[0.03] dark:to-transparent">
+                <div class="container">
+                    <div class="grid gap-y-10 gap-x-4 py-14 sm:grid-cols-3 lg:grid-cols-5 lg:py-[100px]">
+                        <div class="relative">
+                            <img src="assets/images/logo.png" alt="plurk" class="h-7" />
+                            <ul class="mt-12 flex items-center gap-8">
+                                <li>
+                                    <a href="javascript:">
+                                        <svg
+                                            width="10"
+                                            height="20"
+                                            viewBox="0 0 10 20"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="transition hover:scale-110 hover:text-secondary"
+                                        >
+                                            <path
+                                                d="M8.0733 3.29509H9.88498V0.139742C9.57242 0.0967442 8.49748 0 7.2456 0C4.6335 0 2.84415 1.643 2.84415 4.66274V7.44186H-0.0383301V10.9693H2.84415V19.845H6.37821V10.9701H9.1441L9.58317 7.44269H6.37738V5.01251C6.37821 3.99297 6.65273 3.29509 8.0733 3.29509Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:">
+                                        <svg
+                                            width="23"
+                                            height="18"
+                                            viewBox="0 0 23 18"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="transition hover:scale-110 hover:text-secondary"
+                                        >
+                                            <path
+                                                d="M22.8849 2.11613C22.0668 2.475 21.1951 2.71288 20.2862 2.82838C21.2212 2.27013 21.9348 1.39287 22.2703 0.3355C21.3986 0.85525 20.4361 1.22238 19.4103 1.42725C18.5826 0.545875 17.4028 0 16.1158 0C13.6188 0 11.6086 2.02675 11.6086 4.51137C11.6086 4.86888 11.6388 5.21263 11.7131 5.53988C7.96345 5.357 4.64557 3.55988 2.4167 0.82225C2.02757 1.49738 1.79932 2.27012 1.79932 3.102C1.79932 4.664 2.6037 6.04862 3.8027 6.85025C3.07807 6.8365 2.3672 6.62613 1.76495 6.29475C1.76495 6.3085 1.76495 6.32638 1.76495 6.34425C1.76495 8.536 3.32832 10.3565 5.37845 10.7759C5.01132 10.8763 4.6112 10.9244 4.19595 10.9244C3.9072 10.9244 3.6157 10.9079 3.34207 10.8474C3.92645 12.6335 5.5847 13.9466 7.55645 13.9893C6.02195 15.1896 4.07357 15.9129 1.96432 15.9129C1.59445 15.9129 1.2397 15.8964 0.884949 15.851C2.88282 17.1394 5.25057 17.875 7.80395 17.875C16.1034 17.875 20.6409 11 20.6409 5.04075C20.6409 4.84137 20.6341 4.64887 20.6244 4.45775C21.5196 3.8225 22.2717 3.02913 22.8849 2.11613Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:">
+                                        <svg
+                                            width="23"
+                                            height="22"
+                                            viewBox="0 0 23 22"
+                                            fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="transition hover:scale-110 hover:text-secondary"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M7.75995 0H16.0099C19.8063 0 22.8849 3.07862 22.8849 6.875V15.125C22.8849 18.9214 19.8063 22 16.0099 22H7.75995C3.96357 22 0.884949 18.9214 0.884949 15.125V6.875C0.884949 3.07862 3.96357 0 7.75995 0ZM16.0099 19.9375C18.6637 19.9375 20.8224 17.7787 20.8224 15.125V6.875C20.8224 4.22125 18.6637 2.0625 16.0099 2.0625H7.75995C5.1062 2.0625 2.94745 4.22125 2.94745 6.875V15.125C2.94745 17.7787 5.1062 19.9375 7.75995 19.9375H16.0099Z"
+                                                fill="currentColor"
+                                            />
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M6.38495 11C6.38495 7.96263 8.84757 5.5 11.8849 5.5C14.9223 5.5 17.3849 7.96263 17.3849 11C17.3849 14.0374 14.9223 16.5 11.8849 16.5C8.84757 16.5 6.38495 14.0374 6.38495 11ZM8.44745 11C8.44745 12.8948 9.9902 14.4375 11.8849 14.4375C13.7797 14.4375 15.3224 12.8948 15.3224 11C15.3224 9.10388 13.7797 7.5625 11.8849 7.5625C9.9902 7.5625 8.44745 9.10388 8.44745 11Z"
+                                                fill="currentColor"
+                                            />
+                                            <circle cx="17.7975" cy="5.08737" r="0.732875" fill="currentColor" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <img src="assets/images/footer-shape.png" alt="footer-shape" class="absolute bottom-0 right-0 sm:left-0" />
+                            <img
+                                src="assets/images/footer-shape-dark.png"
+                                alt="footer-shape-dark"
+                                class="absolute bottom-0 right-0 hidden dark:block sm:left-0"
+                            />
+                        </div>
+                        <div>
+                            <ul class="flex flex-col gap-3 font-bold">
+                                <li class="mb-3 text-lg font-extrabold text-black dark:text-white">Quick Menu</li>
+                                <li><a href="index.html" class="inline-block transition hover:scale-110 hover:text-secondary">Home</a></li>
+                                <li><a href="portfolio.html" class="inline-block transition hover:scale-110 hover:text-secondary">Portfolio</a></li>
+                                <li><a href="services.html" class="inline-block transition hover:scale-110 hover:text-secondary">Service</a></li>
+                                <li><a href="team.html" class="inline-block transition hover:scale-110 hover:text-secondary">Team</a></li>
+                                <li><a href="about-us.html" class="inline-block transition hover:scale-110 hover:text-secondary">About Us</a></li>
+                                <li><a href="career.html" class="inline-block transition hover:scale-110 hover:text-secondary">Career</a></li>
                             </ul>
                         </div>
-                        <div class="pricing-btn text-center">
-                            <a class="main-btn" href="#contact">اتصل بنا</a>
-                        </div>
-						<div class="buttom-shape">
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 112.35"><defs><style>.color-3{fill:#d63f3f;isolation:isolate;}.cls-1{opacity:0.1;}.cls-2{opacity:0.2;}.cls-3{opacity:0.4;}.cls-4{opacity:0.6;}</style></defs><title>bottom-part1</title><g id="bottom-part"><g id="Group_747" data-name="Group 747"><path id="Path_294" data-name="Path 294" class="cls-1 color-3" d="M0,24.21c120-55.74,214.32,2.57,267,0S349.18,7.4,349.18,7.4V82.35H0Z" transform="translate(0 0)" /><path id="Path_297" data-name="Path 297" class="cls-2 color-3" d="M350,34.21c-120-55.74-214.32,2.57-267,0S.82,17.4.82,17.4V92.35H350Z" transform="translate(0 0)" /><path id="Path_296" data-name="Path 296" class="cls-3 color-3" d="M0,44.21c120-55.74,214.32,2.57,267,0S349.18,27.4,349.18,27.4v74.95H0Z" transform="translate(0 0)" /><path id="Path_295" data-name="Path 295" class="cls-4 color-3" d="M349.17,54.21c-120-55.74-214.32,2.57-267,0S0,37.4,0,37.4v74.95H349.17Z" transform="translate(0 0)" /></g></g></svg>
-</div>
-                    </div> <!-- single pricing -->
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="single-pricing mt-40">
-                        <div class="pricing-header text-center">
-                            <h5 class="sub-title">خطة 2</h5>
-                            <span class="price">35 د.ك</span>
-                            <p class="year">سنوياً</p>
-                        </div>
-                        <div class="pricing-list">
-                            <ul>
-                                <li>Carefully crafted components</li>
-                                <li>Amazing page examples</li>
-                                <li>Super friendly support team</li>
-                                <li>Awesome Support</li>
+                        <div>
+                            <ul class="flex flex-col gap-3 font-bold">
+                                <li class="mb-3 text-lg font-extrabold text-black dark:text-white">Services</li>
+                                <li>
+                                    <a href="services-detail.html" class="inline-block transition hover:scale-110 hover:text-secondary">UI/UX Design</a>
+                                </li>
+                                <li>
+                                    <a href="services-detail.html" class="inline-block transition hover:scale-110 hover:text-secondary">Web Development</a>
+                                </li>
+                                <li>
+                                    <a href="services-detail.html" class="inline-block transition hover:scale-110 hover:text-secondary">Digital Marketing</a>
+                                </li>
+                                <li>
+                                    <a href="services-detail.html" class="inline-block transition hover:scale-110 hover:text-secondary">App Development</a>
+                                </li>
                             </ul>
                         </div>
-                        <div class="pricing-btn text-center">
-                            <a class="main-btn" href="#contact">اتصل بنا</a>
-                        </div>
-						<div class="buttom-shape">
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 112.35"><defs><style>.color-3{fill:#d63f3f;isolation:isolate;}.cls-1{opacity:0.1;}.cls-2{opacity:0.2;}.cls-3{opacity:0.4;}.cls-4{opacity:0.6;}</style></defs><title>bottom-part1</title><g id="bottom-part"><g id="Group_747" data-name="Group 747"><path id="Path_294" data-name="Path 294" class="cls-1 color-3" d="M0,24.21c120-55.74,214.32,2.57,267,0S349.18,7.4,349.18,7.4V82.35H0Z" transform="translate(0 0)" /><path id="Path_297" data-name="Path 297" class="cls-2 color-3" d="M350,34.21c-120-55.74-214.32,2.57-267,0S.82,17.4.82,17.4V92.35H350Z" transform="translate(0 0)" /><path id="Path_296" data-name="Path 296" class="cls-3 color-3" d="M0,44.21c120-55.74,214.32,2.57,267,0S349.18,27.4,349.18,27.4v74.95H0Z" transform="translate(0 0)" /><path id="Path_295" data-name="Path 295" class="cls-4 color-3" d="M349.17,54.21c-120-55.74-214.32,2.57-267,0S0,37.4,0,37.4v74.95H349.17Z" transform="translate(0 0)" /></g></g></svg>
-</div>
-                    </div> <!-- single pricing -->
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="single-pricing mt-40">
-                        <div class="pricing-header text-center">
-                            <h5 class="sub-title">خطة 3</h5>
-                            <span class="price">50 د.ك</span>
-                            <p class="year">سنوياً</p>
-                        </div>
-                        <div class="pricing-list">
-                            <ul>
-                                <li>Carefully crafted components</li>
-                                <li>Amazing page examples</li>
-                                <li>Super friendly support team</li>
-                                <li>Awesome Support</li>
+                        <div>
+                            <ul class="flex flex-col gap-3 font-bold">
+                                <li class="mb-3 text-lg font-extrabold text-black dark:text-white">Legal</li>
+                                <li>
+                                    <a href="terms-conditions.html" class="inline-block transition hover:scale-110 hover:text-secondary">Terms & Conditions</a>
+                                </li>
+                                <li>
+                                    <a href="privacy-policy.html" class="inline-block transition hover:scale-110 hover:text-secondary">Privacy Policy</a>
+                                </li>
+                                <li><a href="faq.html" class="inline-block transition hover:scale-110 hover:text-secondary">FAQs</a></li>
+                                <li><a href="blog.html" class="inline-block transition hover:scale-110 hover:text-secondary">Blog</a></li>
                             </ul>
                         </div>
-                        <div class="pricing-btn text-center">
-                            <a class="main-btn" href="#contact">اتصل بنا</a>
-                        </div>
-						<div class="buttom-shape">
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 112.35"><defs><style>.color-3{fill:#d63f3f;isolation:isolate;}.cls-1{opacity:0.1;}.cls-2{opacity:0.2;}.cls-3{opacity:0.4;}.cls-4{opacity:0.6;}</style></defs><title>bottom-part1</title><g id="bottom-part"><g id="Group_747" data-name="Group 747"><path id="Path_294" data-name="Path 294" class="cls-1 color-3" d="M0,24.21c120-55.74,214.32,2.57,267,0S349.18,7.4,349.18,7.4V82.35H0Z" transform="translate(0 0)" /><path id="Path_297" data-name="Path 297" class="cls-2 color-3" d="M350,34.21c-120-55.74-214.32,2.57-267,0S.82,17.4.82,17.4V92.35H350Z" transform="translate(0 0)" /><path id="Path_296" data-name="Path 296" class="cls-3 color-3" d="M0,44.21c120-55.74,214.32,2.57,267,0S349.18,27.4,349.18,27.4v74.95H0Z" transform="translate(0 0)" /><path id="Path_295" data-name="Path 295" class="cls-4 color-3" d="M349.17,54.21c-120-55.74-214.32,2.57-267,0S0,37.4,0,37.4v74.95H349.17Z" transform="translate(0 0)" /></g></g></svg>
-</div>
-                    </div> <!-- single pricing -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- conteiner -->
-    </section>
-
-    <!--====== PRICING PART ENDS ======-->
-
-    <!--====== CONTACT PART START ======-->
-	<br><br><br>
-    <section id="contact" class="contact-area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-title text-center pb-10">
-                        <h4 class="title">اتصل بنا</h4>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form">
-                        <form name="contact" method="POST" data-netlify="true">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="single-form form-group">
-                                        <input type="text" name="name" placeholder="الاسم" required="required">
-                                        <div class="help-block with-errors"></div>
-                                    </div> <!-- single form -->
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="single-form form-group">
-                                        <input type="email" name="email" placeholder="البريد الالكتروني" required="required">
-                                        <div class="help-block with-errors"></div>
-                                    </div> <!-- single form -->
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="single-form form-group">
-                                        <textarea placeholder="الرسالة" name="message" required="required"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div> <!-- single form -->
-                                </div>
-                                <p class="form-message"></p>
-                                <div class="col-md-12">
-                                    <div class="single-form form-group text-center">
-                                        <button type="submit" class="main-btn">ارسال</button>
-                                    </div> <!-- single form -->
-                                </div>
-                            </div> <!-- row -->
-                        </form>
-                    </div> <!-- row -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- conteiner -->
-    </section>
-	<br><br><br>
-
-    <!--====== CONTACT PART ENDS ======-->
-
-    <!--====== FOOTER PART START ======-->
-
-    <footer id="footer" class="footer-area">
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="copyright text-center">
-                            <p class="text">رموز© لخدمات البرمجة والاستضافة المتكاملة</p>
+                        <div>
+                            <ul class="flex flex-col gap-3 font-bold">
+                                <li class="mb-3 text-lg font-extrabold text-black dark:text-white">Information</li>
+                                <li>164 Brighton Ave, Allston, Maine, U.S. - 02134</li>
+                                <li>
+                                    <a href="tel:+(617) 254-2333" class="inline-block transition hover:scale-110 hover:text-secondary">+(617) 254-2333</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- footer copyright -->
-    </footer>
+                </div>
 
-    <!--====== FOOTER PART ENDS ======-->
+                <div class="bg-gradient-to-r from-[#FCF1F4] to-[#EDFBF9] py-5 dark:border-t-2 dark:border-white/5 dark:bg-none">
+                    <div class="container">
+                        <div class="flex flex-col items-center justify-between text-center font-bold dark:text-white md:flex-row">
+                            <div>
+                                Copyright© <span class="curr-year">2022</span>
+                                <a href="javascript:" class="text-primary transition hover:text-secondary">Plurk Technologies Pvt. Ltd.</a>
+                            </div>
+                            <div>Need help? Visit the <a href="contact-us.html" class="text-secondary transition hover:text-primary">Contact Us</a></div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
-    <!--====== jquery js ======-->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js" defer></script>
-    <script src="assets/js/vendor/jquery-1.12.4.min.js" defer></script>
+        <!-- Return to Top -->
+        <button type="button" id="scrollToTopBtn" class="fixed bottom-5 z-10 hidden animate-bounce ltr:right-5 rtl:left-5" onclick="scrollToTop()">
+            <div
+                class="group flex h-14 w-14 items-center justify-center rounded-full border border-black/20 bg-black text-white transition duration-500 hover:bg-secondary dark:bg-primary dark:hover:bg-secondary"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6 transition group-hover:text-black"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                </svg>
+            </div>
+        </button>
 
-    <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.min.js" defer></script>
-    <script src="assets/js/popper.min.js" defer></script>
+        <!-- Swiper Slider JS -->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!-- Counter Js -->
+        <script src="assets/js/vanilla-counter.js"></script>
+        <!-- AOS Animation JS -->
+        <script src="assets/js/aos.js"></script>
+        <!-- Custom Js -->
+        <script src="assets/js/custom.js"></script>
 
-    <!--====== Scrolling Nav js ======-->
-    <script src="assets/js/jquery.easing.min.js" defer></script>
-    <script src="assets/js/scrolling-nav.js" defer></script>
+        <script>
+            // Testimonial Slider
+            var swiper = new Swiper('.mySwiper', {
+                loop: true,
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                speed: 1000,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.testimonial-swiper-button-next',
+                    prevEl: '.testimonial-swiper-button-prev',
+                },
+            });
 
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js" defer></script>
+            // Counter Js
+            VanillaCounter();
 
-</body>
+            //  Filter
 
+            const filters = document.querySelectorAll('.filter');
+
+            filters.forEach((filter) => {
+                filter.addEventListener('click', function () {
+                    let selectedFilter = filter.getAttribute('data-filter');
+                    let itemsToHide = document.querySelectorAll(`.projects .project:not([data-filter='${selectedFilter}'])`);
+                    let itemsToShow = document.querySelectorAll(`.projects [data-filter='${selectedFilter}']`);
+
+                    if (selectedFilter == 'all') {
+                        itemsToHide = [];
+                        itemsToShow = document.querySelectorAll('.projects [data-filter]');
+                    }
+
+                    filterMenu = document.querySelectorAll('.filters li.filter');
+                    filterMenu.forEach((el) => {
+                        el.classList.remove('active');
+                    });
+                    filter.classList.add('active');
+
+                    itemsToHide.forEach((el) => {
+                        el.classList.add('hidden');
+                        el.classList.remove('block');
+                    });
+
+                    itemsToShow.forEach((el) => {
+                        el.classList.remove('hidden');
+                        el.classList.add('block');
+                    });
+                });
+            });
+        </script>
+    </body>
 </html>
