@@ -10,7 +10,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Cairo', sans-serif;
   color: #444;
 }
 
@@ -31,7 +31,7 @@ h4,
 h5,
 h6,
 .font-primary {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -141,7 +141,7 @@ h6,
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-size: 14px;
   color: #fff;
   white-space: nowrap;
@@ -409,7 +409,7 @@ h6,
 }
 
 #hero .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -515,7 +515,7 @@ h6,
 }
 
 #hero-no-slider .btn-get-started {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -955,7 +955,7 @@ section {
 .facts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-size: 14px;
 }
 
@@ -1171,7 +1171,7 @@ section {
   font-size: 46px;
   color: #68A4C4;
   font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Cairo', sans-serif;
   margin-bottom: 25px;
 }
 
@@ -1220,7 +1220,7 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Cairo', sans-serif;
   transition: 0.3s;
 }
 
@@ -1287,7 +1287,7 @@ section {
   color: #444;
   transition: all 0.3s ease-in-out;
   border-bottom: 2px solid #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
 
 .portfolio #portfolio-flters li:hover,
@@ -2221,7 +2221,7 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Cairo', sans-serif;
   color: #fff;
 }
 
